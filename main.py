@@ -2,10 +2,8 @@ import pyautogui
 import time
 import keyboard
 
-# import win32api, win32con
 
-print(pyautogui.size())
-im = pyautogui.screenshot()
+# print(pyautogui.size())
 
 print("Starting in 3...2...1...")
 time.sleep(3)
@@ -22,31 +20,24 @@ def click(x, y):
     pyautogui.mouseUp()
 
 
-while not keyboard.is_pressed('q'):
+while not keyboard.is_pressed('z'):
     # We need to put * in front of pixel_coordinates so that it unpacks the tuple to be used as args.
+    start_time = time.time()
+
     if pyautogui.pixel(*pixel_coordinates[0])[0] == 0:
         click(*pixel_coordinates[0])
+        print("My program took ", time.time() - start_time, "to run")
+
     if pyautogui.pixel(*pixel_coordinates[1])[0] == 0:
         click(*pixel_coordinates[1])
+        print("My program took ", time.time() - start_time, "to run")
+
     if pyautogui.pixel(*pixel_coordinates[2])[0] == 0:
         click(*pixel_coordinates[2])
+        print("My program took ", time.time() - start_time, "to run")
+
     if pyautogui.pixel(*pixel_coordinates[3])[0] == 0:
         click(*pixel_coordinates[3])
+        print("My program took ", time.time() - start_time, "to run")
 
-#
-# def main():
-#     while not keyboard.is_pressed('q'):
-#         for pixels in pixel_coordinates:
-#             px = im.getpixel(pixels)
-#             time.sleep(0.1)
-#             print(px)
-#             if px == color_to_click:
-#                 pyautogui.moveTo(*pixels)
-#                 pyautogui.click()
-#             if pyautogui.pixel
-#             else:
-#                 continue
-#         main()
-#
-#
-# main()
+
