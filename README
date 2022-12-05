@@ -1,2 +1,15 @@
-This work with the game at the following link: https://gameforge.com/en-US/littlegames/magic-piano-tiles/#
+This works with the game at the following link: https://gameforge.com/en-US/littlegames/magic-piano-tiles/#
 Be sure to full screen your game for this to work properly.
+
+Adjust the pixel placements to your own, this will change if you are not using a 2560x1440p monitor.
+
+It is better to run this script in a python3 shell otherwise it won't work as written, also better performance when using IDLE.
+
+
+Links to documentations:
+
+https://pyautogui.readthedocs.io/en/latest/index.html
+
+https://pypi.org/project/keyboard/
+
+https://docs.python.org/3/library/time.html

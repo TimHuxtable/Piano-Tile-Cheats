@@ -3,11 +3,6 @@ import time
 import keyboard
 
 # import win32api, win32con
-import time
-
-import keyboard
-import pyautogui
-
 
 print(pyautogui.size())
 im = pyautogui.screenshot()
@@ -15,7 +10,7 @@ im = pyautogui.screenshot()
 print("Starting in 3...2...1...")
 time.sleep(3)
 
-pixel_coordinates = [(1000, 237), (1180, 237), (1370, 237), (1600, 237)]
+pixel_coordinates = [(1000, 400), (1180, 400), (1370, 400), (1600, 400)]
 
 color_to_click = (0, 0, 0)
 
@@ -26,15 +21,10 @@ def click(x, y):
     time.sleep(0.01)
     pyautogui.mouseUp()
 
-    # win32api.SetCursorPos((x, y))
-    # win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0)
-    # time.sleep(0.01)
-    # win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, 0, 0)
-
 
 while not keyboard.is_pressed('q'):
     # We need to put * in front of pixel_coordinates so that it unpacks the tuple to be used as args.
-    if pyautogui.pixel(*pixel_coordinates)[0] == 0:
+    if pyautogui.pixel(*pixel_coordinates[0])[0] == 0:
         click(*pixel_coordinates[0])
     if pyautogui.pixel(*pixel_coordinates[1])[0] == 0:
         click(*pixel_coordinates[1])
